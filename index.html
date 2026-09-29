@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10182b">
+  <title>Exam Quest · Semester 5 roadmap</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asset&family=Fjalla+One&family=Goblin+One&family=Oldenburg&family=Playfair+Display+SC:wght@400;700&family=Quattrocento:wght@400;700&family=Shadows+Into+Light&display=swap');
+    :root{--orange:#c87620;--yellow:#f8d830;--red:#c54730;--brown:#593d30;--cream:#fff9e9;--ink:#3b281e;font-family:Quattrocento,serif;color:var(--ink);background:#f9edd1;font-size:16px}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 92% 2%,#f8d83088 0,transparent 27%),radial-gradient(circle at 0% 50%,#c8762022 0,transparent 35%),#f9edd1}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+    .shell{max-width:1160px;margin:auto;padding:28px 22px 80px}.top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.brand{font-family:"Playfair Display SC",serif;font-weight:700;letter-spacing:.035em;color:var(--brown);font-size:1.05rem}.subtitle{color:#755447;font-size:.9rem;font-weight:700}
+    h1,h2,h3{font-family:"Fjalla One",sans-serif;font-weight:400;line-height:1.18}h1{font-size:clamp(2.4rem,5vw,4.4rem);letter-spacing:.015em;margin:0 0 10px;text-transform:uppercase}h2{font-size:1.55rem;margin:0 0 7px;text-transform:uppercase}p{line-height:1.52}
+    .hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 255px;gap:25px;align-items:center;padding:30px;border:3px solid var(--brown);border-radius:22px;background:var(--yellow);box-shadow:8px 8px 0 var(--brown)}.hero:before{content:"";position:absolute;right:220px;top:-75px;width:170px;height:170px;border:22px solid #c8762040;border-radius:50%;pointer-events:none}
+    .hero p{font-family:"Shadows Into Light",cursive;font-size:1.38rem;font-weight:700;margin:0 0 24px;color:#624126}.progress-label{display:flex;justify-content:space-between;gap:10px;font-family:"Fjalla One",sans-serif;font-size:1.05rem;text-transform:uppercase;margin-bottom:9px}.bar{height:24px;background:#fff8df;border-radius:999px;overflow:hidden;border:2px solid var(--brown)}.fill{height:100%;width:0;background:repeating-linear-gradient(115deg,var(--red) 0 22px,#d95c38 22px 30px);border-right:2px solid var(--brown);border-radius:inherit;transition:width .4s}.progress-note{font-weight:700;color:#604334;margin-top:9px}
+    .rank{position:relative;border-radius:18px;background:var(--brown);color:#fff8df;border:2px solid var(--brown);padding:22px;text-align:center;transform:rotate(2deg)}.rank-icon{font-family:"Asset",serif;color:var(--yellow);font-size:2.3rem;line-height:1}.rank b{display:block;font-family:"Goblin One",serif;font-weight:400;font-size:1rem;line-height:1.35;margin:14px 0 6px}.rank span{color:#f4d9ab;font-size:.86rem}
+    .nav{display:flex;gap:9px;overflow-x:auto;margin:34px 0 25px;padding:3px 2px 7px}.nav button{font-family:"Fjalla One",sans-serif;text-transform:uppercase;letter-spacing:.025em;background:var(--cream);color:var(--brown);border:2px solid var(--brown);border-radius:10px;padding:12px 17px;white-space:nowrap;box-shadow:3px 3px 0 #593d3066}.nav button[aria-selected=true]{color:#fff7e3;background:var(--red);box-shadow:3px 3px 0 var(--brown)}.nav button:hover{transform:translateY(-2px)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:17px}.section-head p{color:#765649;margin:0;font-size:1rem}.stat{color:var(--red);font-family:"Fjalla One",sans-serif;font-size:1rem;white-space:nowrap}
+    .days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--cream);border:2px solid var(--brown);border-radius:17px;padding:20px;box-shadow:4px 4px 0 #b99776}.card.current{box-shadow:6px 6px 0 var(--orange);border-color:var(--red)}.card-head{display:flex;justify-content:space-between;gap:12px;align-items:start}.eyebrow{font-family:"Fjalla One",sans-serif;font-size:.88rem;letter-spacing:.07em;text-transform:uppercase;color:var(--red);background:#f8d83066;border-radius:6px;padding:5px 7px}.date{color:#6e5145;font-size:.85rem;font-weight:700;text-align:right}.card h3{margin:12px 0 6px;font-size:1.35rem;color:var(--brown)}.target{color:#614a3e;margin:0 0 16px;font-size:1rem}.event{color:#a53522;background:#f8d83070;padding:8px;border-radius:7px;font-weight:700;margin:8px 0}.tasks{display:grid;gap:9px}.task{display:flex;align-items:flex-start;gap:12px;border:1.5px solid #c5a98e;background:#fffdf6;border-radius:10px;padding:13px;cursor:pointer;transition:transform .16s,background .16s,border-color .16s}.task:hover{border-color:var(--red);transform:translateX(2px)}.task input{width:23px;height:23px;accent-color:var(--red);flex:none;margin:1px 0;cursor:pointer}.task.done{background:#f7e9bd;border-color:var(--orange)}.task.done .task-title{text-decoration:line-through;text-decoration-color:var(--red);color:#806254}.task-title{font-weight:700;line-height:1.4}.task-detail{font-size:.92rem;color:#5b473e;line-height:1.5;margin-top:6px}.milestone{border-top:2px dashed #cba97c;padding-top:12px;margin:16px 0 0;font-size:.9rem;color:#694c3b;font-style:italic;font-weight:700}
+    .group{margin:0 0 20px}.group-title{font-family:"Fjalla One",sans-serif;color:var(--brown);font-size:1rem;line-height:1.5;margin:22px 0 10px;border-left:6px solid var(--orange);padding-left:10px}.list{display:grid;gap:8px}.list .task{padding:13px 15px}.list .task-title{font-weight:400}.minor{color:#745a4a;font-size:.85rem;margin-top:5px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.toolbar select,.toolbar input{background:var(--cream);color:var(--ink);border:2px solid var(--brown);border-radius:9px;padding:11px 13px;min-width:190px}.toolbar input{flex:1}.empty{padding:32px;text-align:center;color:#745a4a;border:2px dashed var(--brown);border-radius:16px}
+    footer{margin-top:44px;color:#765b4e;font-size:.9rem;text-align:center}.reward{position:fixed;right:22px;bottom:22px;z-index:5;background:var(--yellow);border:2px solid var(--brown);border-radius:12px;box-shadow:4px 4px 0 var(--brown);padding:13px 18px;font-family:"Fjalla One",sans-serif;font-size:1.15rem;color:var(--brown);animation:pop .25s ease-out}.reward[hidden]{display:none}@keyframes pop{from{opacity:0;transform:translateY(15px) scale(.85)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+    @media(max-width:760px){.shell{padding:18px 14px 55px}.hero{grid-template-columns:1fr;padding:22px;box-shadow:5px 5px 0 var(--brown)}.hero:before{right:-50px}.rank{display:flex;align-items:center;text-align:left;gap:14px;padding:13px;transform:none}.rank-icon{font-size:1.8rem}.rank b{margin:0}.days{grid-template-columns:1fr}.section-head{align-items:start}.date{max-width:45%}.card{padding:17px}.nav{margin-top:28px}.nav button{padding:10px 12px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="top"><div class="brand">✦ Exam Quest</div><div class="subtitle">B.Tech CSE · Semester 5</div></div>
+    <section class="hero" aria-label="Overall progress">
+      <div><h1>Your exam roadmap</h1><p>12 days · 5 subjects · one step at a time</p><div class="progress-label"><span>Overall progress</span><span id="percent">0%</span></div><div class="bar" role="progressbar" aria-label="Overall completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="fill"></div></div><div class="progress-note" id="count"></div></div>
+      <div class="rank"><div class="rank-icon" id="rank-icon">✦</div><div><b id="rank">Getting started</b><span id="rank-note">Your first checkpoint awaits</span></div></div>
+    </section>
+    <nav class="nav" aria-label="Roadmap sections">
+      <button data-view="days" aria-selected="true">Daily plan</button><button data-view="watch" aria-selected="false">Watch order & missing topics</button><button data-view="questions" aria-selected="false">Question bank</button>
+    </nav>
+    <section id="content"></section>
+    <footer>Progress is saved on this device in your browser.</footer>
+  </main>
+  <div class="reward" id="reward" role="status" aria-live="polite" hidden></div>
+  <script src="./data.js"></script>
+  <script>
+    const data=window.ROADMAP, key='exam-quest-v1';
+    let checked;try{checked=new Set(JSON.parse(localStorage.getItem(key)||'[]'))}catch{checked=new Set()}
+    let view='days', subject='All subjects', query='';
+    const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const tasks=[
+      ...data.days.flatMap(d=>d.rows.map((r,i)=>({id:'day-'+d.day+'-'+i}))),
+      ...data.watch.map((r,i)=>({id:'watch-'+i})),
+      ...data.questions.map((r,i)=>({id:'question-'+i}))
+    ];
+    function task(id,title,detail='',minor=''){
+      return `<label class="task ${checked.has(id)?'done':''}"><input type="checkbox" data-id="${id}" ${checked.has(id)?'checked':''}><span><span class="task-title">${esc(title)}</span>${detail?'<div class="task-detail">'+esc(detail)+'</div>':''}${minor?'<div class="minor">'+esc(minor)+'</div>':''}</span></label>`;
+    }
+    function progress(){
+      const n=tasks.filter(t=>checked.has(t.id)).length,p=Math.round(n/tasks.length*100);
+      document.querySelector('#percent').textContent=p+'%';document.querySelector('#fill').style.width=p+'%';
+      document.querySelector('.bar').setAttribute('aria-valuenow',p);
+      document.querySelector('#count').textContent=n+' of '+tasks.length+' checkpoints complete · '+(n*10)+' XP earned';
+      const rank=p===100?['🏆','Exam champion','Every checkpoint complete']:p>=75?['◆','Final stretch','Keep the momentum']:p>=50?['✦','Focused contender','Halfway through']:p>=25?['✧','Building momentum','Your effort is adding up']:['✦','Getting started','Your first checkpoint awaits'];
+      document.querySelector('#rank-icon').textContent=rank[0];document.querySelector('#rank').textContent=rank[1];document.querySelector('#rank-note').textContent=rank[2];
+    }
+    function renderDays(){
+      const cards=data.days.map(d=>{
+        const ids=d.rows.map((_,i)=>'day-'+d.day+'-'+i),done=ids.filter(id=>checked.has(id)).length;
+        const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+        const dayDate=new Date(Date.UTC(2026,8,27+d.day)).toISOString().slice(0,10);
+        return `<article class="card ${dayDate===today?'current':''}"><div class="card-head"><span class="eyebrow">Day ${d.day} · ${done}/${ids.length} done</span><span class="date">${esc(d.date)}</span></div><h3>${esc(d.subject||d.event.replace(/.*EXAM \d+: /,'Exam: '))}</h3>${d.target?'<p class="target">'+esc(d.target)+'</p>':''}${d.event?'<p class="event">'+esc(d.event)+'</p>':''}<div class="tasks">${d.rows.map((r,i)=>task(ids[i],r.label+' · '+r.task,r.detail,r.duration)).join('')}</div>${d.milestone?'<p class="milestone">🏁 '+esc(d.milestone)+'</p>':''}</article>`;
+      }).join('');
+      return '<div class="section-head"><div><h2>Daily plan</h2><p>Two focused study blocks per day, with exam-day shifts built in.</p></div><span class="stat">28 Sep – 9 Oct</span></div><div class="days">'+cards+'</div>';
+    }
+    function renderLibrary(kind){
+      const isWatch=kind==='watch', rows=isWatch?data.watch:data.questions;
+      const subjects=[...new Set(rows.map(r=>r.subject))];
+      if(subject!=='All subjects'&&!subjects.includes(subject))subject='All subjects';
+      const filtered=rows.map((r,i)=>({...r,id:(isWatch?'watch-':'question-')+i})).filter(r=>(subject==='All subjects'||r.subject===subject)&&(!query||JSON.stringify(r).toLowerCase().includes(query.toLowerCase())));
+      const groups=new Map();filtered.forEach(r=>{const k=r.subject+'|'+r.unit+(isWatch?'|'+r.kind:'');if(!groups.has(k))groups.set(k,[]);groups.get(k).push(r)});
+      const options=['All subjects',...subjects].map(s=>'<option '+(subject===s?'selected':'')+' value="'+esc(s)+'">'+esc(s)+'</option>').join('');
+      return `<div class="section-head"><div><h2>${isWatch?'Watch order & missing topics':'Question bank'}</h2><p>${isWatch?'Follow the source order or tick off gaps as you cover them.':'Practice questions from easy foundations to 20-mark cases.'}</p></div></div><div class="toolbar"><select id="subject" aria-label="Filter subject">${options}</select><input id="search" type="search" placeholder="Search topics or questions" aria-label="Search" value="${esc(query)}"></div><div class="minor">${filtered.length} checkpoints shown</div>${filtered.length?[...groups].map(([k,items])=>'<div class="group"><div class="group-title">'+esc(k.replaceAll('|',' · '))+'</div><div class="list">'+items.map(r=>task(r.id,isWatch?r.text:r.label+' · '+r.text)).join('')+'</div></div>').join(''):'<div class="empty">No matching checkpoints. Try another search.</div>'}`;
+    }
+    function render(){document.querySelector('#content').innerHTML=view==='days'?renderDays():renderLibrary(view);document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.view===view)));progress()}
+    let rewardTimer;
+    document.addEventListener('change',e=>{if(e.target.matches('[data-id]')){const earned=e.target.checked;e.target.checked?checked.add(e.target.dataset.id):checked.delete(e.target.dataset.id);localStorage.setItem(key,JSON.stringify([...checked]));render();if(earned){const toast=document.querySelector('#reward');toast.textContent='✦ +10 XP · Checkpoint cleared!';toast.hidden=false;clearTimeout(rewardTimer);rewardTimer=setTimeout(()=>toast.hidden=true,2400)}}if(e.target.id==='subject'){subject=e.target.value;render()}});
+    document.addEventListener('input',e=>{if(e.target.id==='search'){const start=e.target.selectionStart;query=e.target.value;render();const field=document.querySelector('#search');field.focus();field.setSelectionRange(start,start)}});
+    document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.view;query='';render()}));
+    render();
+  </script>
+</body>
+</html>
